@@ -5,9 +5,6 @@ const equalObjectByFields = (object1, object2) => {
   let keysObj1 = Object.keys(object1);
   let keysObj2 = Object.keys(object2);
 
-  console.log(keysObj1);
-  console.log(keysObj2);
-
   if (keysObj1.length !== keysObj2.length) {
     return false;
   }
