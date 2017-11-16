@@ -15,7 +15,7 @@ router.post('/', async (req, res, next) => {
     let result = await uniqueObject(object);
 
     if (result) {
-      object.expireAt = new Date(Date.now() + +object.ttl);
+      object.expireAt = new Date(Date.now() + +object.ttl * 1000);
       object.create = new Date();
       await insertObject(object);
       status = 200;
